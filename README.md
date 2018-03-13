@@ -11,7 +11,7 @@ The lock icon is different from the original project, with a transparent black c
 Make sure you have all the dependencies:
 
 ```
-sudo apt-get install swaygrab imagemagick swaylock jq
+sudo apt-get install sway imagemagick jq
 ```
 
 Copy the `lock` script along with the images to some place on your system (e.g.: the sway folder) and give it execution permission:
