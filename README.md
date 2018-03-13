@@ -1,4 +1,4 @@
-# i3lock-fancy-multimonitor
+# swaylock-fancy-multimonitor
 The idea for this project was shamelessly copied from [meskarune](https://github.com/meskarune)'s [i3lock-fancy](https://github.com/meskarune/i3lock-fancy).
 
 It uses [scrot](http://freecode.com/projects/scrot) to take a screenshot of the desktop, then [ImageMagick](http://www.imagemagick.org/) blurs the image and adds a lock icon and text.
@@ -11,24 +11,24 @@ The lock icon is different from the original project, with a transparent black c
 Make sure you have all the dependencies:
 
 ```
-sudo apt-get install scrot imagemagick i3lock
+sudo apt-get install swaygrab imagemagick swaylock jq
 ```
 
-Copy the `lock` script along with the images to some place on your system (e.g.: the i3 folder) and give it execution permission:
+Copy the `lock` script along with the images to some place on your system (e.g.: the sway folder) and give it execution permission:
 
 ```
-git clone https://github.com/guimeira/i3lock-fancy-multimonitor.git
-cp -r i3lock-fancy-multimonitor ~/.i3
-chmod +x ~/.i3/i3lock-fancy-multimonitor/lock
+git clone https://github.com/sainoba/swaylock-fancy-multimonitor.git
+cp -r swaylock-fancy-multimonitor ~/.sway
+chmod +x ~/.sway/swaylock-fancy-multimonitor/lock
 ```
 
-Create a key binding on your i3 config file (in this example I'm using $mod+p):
+Create a key binding on your sway config file (in this example I'm using $mod+p):
 
 ```
-echo "bindsym \$mod+p exec /home/<your username>/.i3/i3lock-fancy-multimonitor/lock" >> ~/.i3/config
+echo "bindsym \$mod+p exec /home/<your username>/.sway/swaylock-fancy-multimonitor/lock" >> ~/.sway/config
 ```
 
-Now reload the i3 configuration file. By default, the key binding is `$mod+Shift+c`.
+Now reload the sway configuration file. By default, the key binding is `$mod+Shift+c`.
 
 ## Command line parameters
 
